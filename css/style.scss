@@ -31,7 +31,7 @@ body{
     border: 2px solid #eee;
     position: relative;;
     min-width: 500px;
-    height: 600px;
+    height: 100vh;
     display: flex;
     align-items: flex-end;
 }
@@ -50,6 +50,7 @@ body{
     h2, h4{
         margin: 5px;
         margin-left: 20px; 
+        font-weight: 500;
     }
     h2{
         margin-top: 20px;

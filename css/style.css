@@ -24,7 +24,7 @@ body {
   border: 2px solid #eee;
   position: relative;
   min-width: 500px;
-  height: 600px;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,6 +50,7 @@ body {
 .msg_send_alert h2, .msg_send_alert h4 {
   margin: 5px;
   margin-left: 20px;
+  font-weight: 500;
 }
 
 .msg_send_alert h2 {
