@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat Here</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="msg_wrapper">
+        <div class="msg_send_alert">
+              <div class="msg_send_center">
+                <span>Remove Message</span>
+                <h2>Remove Message</h2>
+                <h4>Are you sure you want to remove this message?</h4>
+
+                <div class="btn_wrapper">
+                  <button class="btn_send_remove">Remove</button>
+                  <button class="btn_send_cancel">Cancel</button>
+                </div>
+              </div>
+        </div>
+        <div class="msg_showing_box">
+            <!-- Remove msg box alert -->
+           
+
+        </div>
+
+
+
+
+        <!-- Input Typing Box -->
+        <div class="input_wrapper">
+            <!-- text input -->
+            <form action="post" onsubmit="return msg_send()">
+                <input type="text" id="text_input" placeholder="Type Message">
+            </form>
+            <div class="text_input_fa" title="Open Expression Picker">
+                <i class="fa text-write-fa fa-smile-o" aria-hidden="true"></i>
+                <i class="fa text-write-fa hide-fa fa-angle-down" aria-hidden="true"></i>
+
+            </div>
+            <!-- icon wrapper -->
+            <div class="icon_wrapper">
+                <ul class="icon_button_wrapper">
+                    <li><button onclick="currentIcon(1)" class="btn" title="General"><!--Emoticons-->  General </button></li>
+                    <li><button onclick="currentIcon(2)" class="btn" title="Hailing"><!--GIFs--> Hailing</button></li>
+                    <li><button onclick="currentIcon(3)" class="btn" title="Greeting"><!-- Stickers --> Greeting</button></li>
+                    <li><button onclick="currentIcon(4)" class="btn" title="Let down"><!-- Mojis--> Let down</button></li>
+                    <li><button onclick="currentIcon(5)" class="btn" title="Appreciation">Appreciation</button></li>
+
+                    <li class="icon_search_li">
+                        <input type="search" onkeyup="search_icon()" id="search-icon" placeholder="Search">
+                    </li>
+                </ul>
+                <div class="icon_gallery_wrapper">
+                    <div class="icon_gallery_slide emoticons_slide ">
+
+                        <!-- Icons Gallery Slide Content -->
+
+
+                        <div class="slide_inner_wrapper">
+                            <div class="icons_preview icons_inner">
+                                <img src="img/General/0.svg" alt="">
+                                <!-- <span class="icons_alt_show"> Smile</span> -->
+                            </div>
+                            <div class="icons_list icons_inner">
+                                <div class="icons_list_go">
+
+                                    <!---- Icon List Slide--->
+                                    <ul class="emoticons_slide ul_slide">
+                                        <div class="icons_list_title">General</div>
+                                        <li><img src="img/General/0.svg" alt="0"></li>
+                                        <li><img src="img/General/100.svg" alt="100"></li>
+                                        <li><img src="img/General/101.svg" alt="101"></li>
+                                        <li><img src="img/General/102.svg" alt="102"></li>
+                                        <li><img src="img/General/103.svg" alt="103"></li>
+                                        <li><img src="img/General/105.svg" alt="105"></li>
+                                        <li><img src="img/General/106.svg" alt="106"></li>
+                                        <li><img src="img/General/107.svg" alt="107"></li>
+                                        <li><img src="img/General/108.svg"
+                                                alt="108"></li>
+                                        <li><img src="img/General/109.svg" alt="109"></li>
+                                        <li><img src="img/General/110.svg" alt="110"></li>
+                                        <li><img src="img/General/111.svg" alt="111"></li>
+                                        <li><img src="img/General/112.svg" alt="112"></li>
+                                        <li><img src="img/General/113.svg" alt="113"></li>
+                                        <li><img src="img/General/114.svg" alt="114"></li>
+                                        <li><img src="img/General/116.svg" alt="116"></li>
+                                        <li><img src="img/General/117.svg" alt="117"></li>
+                                        <li><img src="img/General/118.svg" alt="118"></li>
+                                        <li><img src="img/General/119.svg" alt="119"></li>
+                                        <li><img src="img/General/120.svg" alt="120"></li>
+                                        <li><img src="img/General/121.svg" alt="121"></li>
+                                        <li><img src="img/General/122.svg" alt="122">
+                                        </li>
+                                        <li><img src="img/General/123.svg" alt="123"></li>
+                                        <li><img src="img/General/124.svg" alt="124"></li>
+                                        <li><img src="img/General/125.svg" alt="125"></li>
+                                        <li><img src="img/General/126.svg" alt="126"></li>
+                                        <li><img src="img/General/128.svg" alt="128"></li>
+                                        <li><img src="img/General/129.svg" alt="129"></li>
+                                        <li><img src="img/General/13.svg" alt="13"></li>
+                                        <li><img src="img/General/130.svg" alt="130"></li>
+                                        <li><img src="img/General/131.svg" alt="131"></li>
+                                        <li><img src="img/General/132.svg" alt="132"></li>
+                                        <li><img src="img/General/133.svg" alt="133"></li>
+                                        <li><img src="img/General/134.svg" alt="134"></li>
+                                        <li><img src="img/General/135.svg" alt="135"></li>
+                                        <li><img src="img/General/136.svg" alt="136"></li>
+                                        <li><img src="img/General/137.svg" alt="137"></li>
+                                        <li><img src="img/General/138.svg" alt="138"></li>
+                                        <li><img src="img/General/139.svg" alt="139"></li>
+                                        <li><img src="img/General/144.svg" alt="144"></li>
+                                        <li><img src="img/General/148.svg" alt="148"></li>
+                                        <li><img src="img/General/149.svg" alt="149"></li>
+                                        <li><img src="img/General/150.svg" alt="150"></li>
+                                        <li><img src="img/General/157.svg" alt="157"></li>
+                                        <li><img src="img/General/16.svg" alt="16"></li>
+                                        <li><img src="img/General/171.svg" alt="171"></li>
+                                        <li><img src="img/General/19.svg" alt="19"></li>
+                                        <li><img src="img/General/1a.svg" alt="1a"></li>
+                                        <li><img src="img/General/20.svg" alt="20"></li>
+                                        <li><img src="img/General/25.svg" alt="25"></li>
+                                        <li><img src="img/General/26.svg" alt="26"></li>
+                                        <li><img src="img/General/27.svg" alt="27"></li>
+                                        <li><img src="img/General/28.svg" alt="28"></li>
+                                        <li><img src="img/General/29.svg" alt="29"></li>
+                                        <li><img src="img/General/30.svg" alt="30"></li>
+                                        <li><img src="img/General/31.svg" alt="31"></li>
+                                        <li><img src="img/General/32.svg" alt="32"></li>
+                                        <li><img src="img/General/33.svg" alt="33"></li>
+                                        <li><img src="img/General/34.svg" alt="34"></li>
+                                        <li><img src="img/General/35.svg" alt="35"></li>
+                                        <li><img src="img/General/36.svg" alt="36"></li>
+                                        <li><img src="img/General/37.svg" alt="37"></li>
+                                        <li><img src="img/General/38.svg" alt="38"></li>
+                                        <li><img src="img/General/39.svg" alt="39"></li>
+                                        <li><img src="img/General/40.svg" alt="40"></li>
+                                        <li><img src="img/General/41.svg" alt="41"></li>
+                                        <li><img src="img/General/42.svg" alt="42"></li>
+                                        <li><img src="img/General/43.svg" alt="43"></li>
+                                        <li><img src="img/General/44.svg" alt="44"></li>
+                                        <li><img src="img/General/45.svg" alt="45"></li>
+                                        <li><img src="img/General/46.svg" alt="46"></li>
+                                        <li><img src="img/General/47.svg" alt="47"></li>
+                                        <li><img src="img/General/49.svg" alt="49"></li>
+                                        <li><img src="img/General/50.svg" alt="50"></li>
+                                        <li><img src="img/General/56.svg" alt="56"></li>
+                                        <li><img src="img/General/57.svg" alt="57"></li>
+                                        <li><img src="img/General/59.svg" alt="59"></li>
+                                        <li><img src="img/General/6.svg" alt="6"></li>
+                                        <li><img src="img/General/60.svg" alt="60"></li>
+                                        <li><img src="img/General/62.svg" alt="62"></li>
+                                        <li><img src="img/General/63.svg" alt="63"></li>
+                                        <li><img src="img/General/64.svg" alt="64"></li>
+                                        <li><img src="img/General/65.svg" alt="65"></li>
+                                        <li><img src="img/General/66.svg" alt="66"></li>
+                                        <li><img src="img/General/67.svg" alt="67"></li>
+                                        <li><img src="img/General/68.svg" alt="68"></li>
+                                        <li><img src="img/General/69.svg" alt="69"></li>
+                                        <li><img src="img/General/70.svg" alt="70"></li>
+                                        <li><img src="img/General/71.svg" alt="71"></li>
+                                        <li><img src="img/General/72.svg" alt="72"></li>
+                                        <li><img src="img/General/73.svg" alt="73"></li>
+                                        <li><img src="img/General/74.svg" alt="74"></li>
+                                        <li><img src="img/General/75.svg" alt="75"></li>
+                                        <li><img src="img/General/76.svg" alt="76"></li>
+                                        <li><img src="img/General/77.svg" alt="77"></li>
+                                        <li><img src="img/General/78.svg" alt="78"></li>
+                                        <li><img src="img/General/79.svg" alt="79"></li>
+                                        <li><img src="img/General/8.svg" alt="8"></li>
+                                        <li><img src="img/General/80.svg" alt="80"></li>
+                                        <li><img src="img/General/84.svg" alt="84"></li>
+                                        <li><img src="img/General/85.svg" alt="85"></li>
+                                        <li><img src="img/General/86.svg" alt="86"></li>
+                                        <li><img src="img/General/87.svg" alt="87"></li>
+                                        <li><img src="img/General/88.svg" alt="88"></li>
+                                        <li><img src="img/General/89.svg" alt="89"></li>
+                                        <li><img src="img/General/9.svg" alt="9"></li>
+                                        <li><img src="img/General/90.svg" alt="90"></li>
+                                        <li><img src="img/General/91.svg" alt="91"></li>
+                                        <li><img src="img/General/92.svg" alt="92"></li>
+                                        <li><img src="img/General/93.svg" alt="93"></li>
+                                        <li><img src="img/General/94.svg" alt="94"></li>
+                                        <li><img src="img/General/95.svg" alt="95"></li>
+                                        <li><img src="img/General/96.svg" alt="96"></li>
+                                        <li><img src="img/General/97.svg" alt="97"></li>
+                                        <li><img src="img/General/98.svg" alt="98"></li>
+                                        <li><img src="img/General/99.svg" alt="99"></li>
+
+                                    </ul>
+
+
+                                </div>
+                             
+
+                            </div>
+                        </div>
+                        <!-- Icons Gallery Slide Content End -->
+
+
+                    </div>
+                    <div class="icon_gallery_slide GIFs_slide ">
+                        <!-- For GIFs Slide Start-->
+
+
+                        <!-- Icons Gallery Slide Content -->
+
+
+                        <div class="slide_inner_wrapper">
+                            <div class="icons_preview icons_inner">
+                                <img src="img/Hailing/10.svg" alt="">
+                                <!-- <span class="icons_alt_show"> Smile</span> -->
+                            </div>
+                            <div class="icons_list icons_inner">
+                                <div class="icons_list_go">
+
+                                    <!---- Icon List Slide--->
+                                    <ul class="GIFs_slide ul_slide">
+
+                                        <div class="icons_list_title">Hailing</div>
+
+                                        <li><img src="img/Hailing/10.svg" alt="10"></li>
+                                        <li><img src="img/Hailing/11.svg" alt="11"></li>
+                                        <li><img src="img/Hailing/12.svg" alt="12"></li>
+                                        <li><img src="img/Hailing/142.svg" alt="142"></li>
+                                        <li><img src="img/Hailing/143.svg" alt="143"></li>
+                                        <li><img src="img/Hailing/147.svg" alt="147"></li>
+                                        <li><img src="img/Hailing/158.svg" alt="158"></li>
+                                        <li><img src="img/Hailing/159.svg" alt="159">
+                                        </li>
+                                        <li><img src="img/Hailing/169.svg" alt="169">
+                                        </li>
+                                        <li><img src="img/Hailing/17.svg" alt="17"></li>
+                                        <li><img src="img/Hailing/170.svg" alt="170"></li>
+                                        <li><img src="img/Hailing/173.svg" alt="173"></li>
+                                        <li><img src="img/Hailing/175.svg" alt="175"></li>
+                                        <li><img src="img/Hailing/18.svg" alt="18"></li>
+                                        <li><img src="img/Hailing/2.svg" alt="2"></li>
+                                        <li><img src="img/Hailing/21.svg" alt="21"></li>
+                                        <li><img src="img/Hailing/3.svg" alt="3"></li>
+                                        <li><img src="img/Hailing/48.svg" alt="48"></li>
+                                        <li><img src="img/Hailing/51.svg" alt="51"></li>
+                                        <li><img src="img/Hailing/52.svg" alt="52"></li>
+                                        <li><img src="img/Hailing/53.svg" alt="53"></li>
+                                        <li><img src="img/Hailing/54.svg" alt="54"></li>
+                                        <li><img src="img/Hailing/55.svg" alt="55"></li>
+                                        <li><img src="img/Hailing/58.svg" alt="58"></li>
+                                        <li><img src="img/Hailing/7.svg" alt="7"></li>
+                                        <li><img src="img/Hailing/81.svg" alt="81"></li>
+                                        <li><img src="img/Hailing/82.svg" alt="82"></li>
+                                        <li><img src="img/Hailing/83.svg" alt="83"></li>
+                                        
+                                    </ul>
+                                </div>
+                           
+
+                            </div>
+                        </div>
+                        <!-- Icons Gallery Slide Content End -->
+
+
+                        <!-- For GIFs Slide End-->
+
+
+                    </div>
+                    <div class="icon_gallery_slide stickers_slide">
+                        <!-- For Stickers Slide Start -->
+
+
+
+                        <!-- Icons Gallery Slide Content -->
+
+
+                        <div class="slide_inner_wrapper">
+                            <div class="icons_preview icons_inner">
+                                <img src="img/Greetings/151.svg" alt="">
+                                <!-- <span class="icons_alt_show"> Smile</span> -->
+                            </div>
+                            <div class="icons_list icons_inner">
+                                <div class="icons_list_go">
+
+                                    <!---- Icon List Slide--->
+                                    <ul class="stickers_slide ul_slide">
+
+                                        <div class="icons_list_title">Greetings</div>
+
+                                        <li><img src="img/Greetings/151.svg" alt="151"></li>
+                                        <li><img src="img/Greetings/166.svg" alt="166"></li>
+                                        <li><img src="img/Greetings/167.svg" alt="167"></li>
+                                    </ul>
+
+
+                                </div>
+                              
+
+                            </div>
+                        </div>
+                        <!-- Icons Gallery Slide Content End -->
+
+
+
+
+
+
+
+
+                        <!-- For Stickers Slide End -->
+                    </div>
+
+                    <div class="icon_gallery_slide mojis_slide">
+                        <!-- For Mojis Slide Start -->
+
+
+
+
+                        <!-- Icons Gallery Slide Content -->
+
+
+                        <div class="slide_inner_wrapper">
+                            <div class="icons_preview icons_inner">
+                                <img src="img/Let_Down/14.svg" alt="">
+                                <!-- <span class="icons_alt_show"> Smile</span> -->
+                            </div>
+                            <div class="icons_list icons_inner">
+                                <div class="icons_list_go">
+
+                                    <!---- Icon List Slide--->
+                                    <ul class="mojis_slide ul_slide">
+                                        <!-- <li>Smile</li> -->
+                                        <div class="icons_list_title">Let Down</div>
+
+                                        <li><img src="img/Let_Down/14.svg" alt="14"></li>
+                                        <li><img src="img/Let_Down/22.svg" alt="22"></li>
+                                        <li><img src="img/Let_Down/23.svg" alt="23"></li>
+                                        <li><img src="img/Let_Down/25.svg" alt="25"></li>
+                                        <li><img src="img/Let_Down/4.svg" alt="4"></li>
+                                        <li><img src="img/Let_Down/5.svg" alt="5"></li>
+
+                                    </ul>
+
+
+                                </div>
+                              
+                            </div>
+                        </div>
+                        <!-- Icons Gallery Slide Content End -->
+
+
+
+
+
+
+                        <!-- For Mojis Slide End -->
+
+                    </div>
+                    <!-- <div class="icon_gallery_slide">
+
+                </div> -->
+                <!--For Appreciate slide Start-->
+
+
+
+
+                <div class="icon_gallery_slide Appreciation_slide">
+                    <!-- For Mojis Slide Start -->
+
+
+
+
+                    <!-- Icons Gallery Slide Content -->
+
+
+                    <div class="slide_inner_wrapper">
+                        <div class="icons_preview icons_inner">
+                            <img src="img/Appreciation/127.svg" alt="">
+                            <!-- <span class="icons_alt_show"> Smile</span> -->
+                        </div>
+                        <div class="icons_list icons_inner">
+                            <div class="icons_list_go">
+
+                                <!---- Icon List Slide--->
+                                <ul class="Appreciation_slide ul_slide">
+                                    <!-- <li>Smile</li> -->
+                                    <div class="icons_list_title">Appreciation</div>
+
+                                    <li><img src="img/Appreciation/127.svg" alt="127"></li>
+                                    <li><img src="img/Appreciation/140.svg" alt="140"></li>
+                                    <li><img src="img/Appreciation/141.svg" alt="141"></li>
+                                    <li><img src="img/Appreciation/145.svg" alt="145"></li>
+                                    <li><img src="img/Appreciation/146.svg" alt="146"></li>
+                                    <li><img src="img/Appreciation/152.svg" alt="152"></li>
+                                    <li><img src="img/Appreciation/153.svg" alt="153"></li>
+                                    <li><img src="img/Appreciation/154.svg" alt="154"></li>
+                                    <li><img src="img/Appreciation/155.svg" alt="155"></li>
+                                    <li><img src="img/Appreciation/156.svg" alt="156"></li>
+                                    <li><img src="img/Appreciation/160.svg" alt="160"></li>
+                                    <li><img src="img/Appreciation/161.svg" alt="161"></li>
+                                    <li><img src="img/Appreciation/162.svg" alt="162"></li>
+                                    <li><img src="img/Appreciation/163.svg" alt="163"></li>
+                                    <li><img src="img/Appreciation/164.svg" alt="164"></li>
+                                    <li><img src="img/Appreciation/165.svg" alt="165"></li>
+                                    <li><img src="img/Appreciation/168.svg" alt="168"></li>
+                                    <li><img src="img/Appreciation/172.svg" alt="172"></li>
+                                    <li><img src="img/Appreciation/174.svg" alt="174"></li>
+
+                                </ul>
+                            </div>
+                           
+
+                        </div>
+                    </div>
+                    <!-- Icons Gallery Slide Content End -->
+
+
+
+
+
+
+                    <!-- For Mojis Slide End -->
+
+                </div>
+
+                <!--For Appreciate slide End-->
+
+            
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
