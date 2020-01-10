@@ -23,7 +23,6 @@ body {
 .msg_wrapper {
   border: 2px solid #eee;
   position: relative;
-  min-width: 500px;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -237,6 +236,7 @@ body {
   width: 100%;
   height: 300px;
   position: absolute;
+  overflow: auto;
   bottom: 100%;
   left: 0px;
   display: none;
@@ -257,7 +257,6 @@ body {
 .icon_button_wrapper {
   margin: 0;
   padding: 0;
-  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,6 +291,7 @@ body {
   border: none;
   outline: none;
   padding: 8px 12px;
+  margin: 3px;
   font-size: 13px;
   border-radius: 20px;
   color: #C6C6C8;
@@ -313,7 +313,7 @@ body {
   padding-left: 40px;
   width: 180px;
   position: relative;
-  background: url("../img/search_icon.png") 3% center/25px 80% no-repeat;
+  background: url("../img/icon_search.png") 5% center/20px 70% no-repeat;
 }
 
 .icon_gallery_wrapper {
@@ -353,7 +353,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  width: 25%;
+  width: 200px;
 }
 
 .slide_inner_wrapper .icons_preview img {
@@ -361,7 +361,7 @@ body {
 }
 
 .slide_inner_wrapper .icons_list {
-  width: 75%;
+  width: calc(100% - 200px);
 }
 
 .slide_inner_wrapper .icons_list .icons_list_go {
@@ -378,11 +378,17 @@ body {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   margin: 0px 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .slide_inner_wrapper .icons_list .icons_list_go ul li {
-  width: 100px;
-  height: 50px;
+  width: 150px;
+  height: 70px;
   cursor: pointer;
   border-radius: 5px;
   margin: 2px;
@@ -406,6 +412,7 @@ body {
 
 .slide_inner_wrapper .icons_list .icons_list_go ul li img {
   width: 100%;
+  height: 100%;
 }
 
 .slide_inner_wrapper .icons_list .icons_list_go ul .icons_list_title {

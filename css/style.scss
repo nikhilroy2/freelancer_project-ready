@@ -30,7 +30,7 @@ body{
 .msg_wrapper{
     border: 2px solid #eee;
     position: relative;;
-    min-width: 500px;
+    // min-width: 500px;
     height: 100vh;
     display: flex;
     align-items: flex-end;
@@ -212,6 +212,7 @@ body{
         width: 100%;
         height: 300px;
         position: absolute;
+        overflow: auto;
         bottom: 100%;
         left: 0px;
         display: none;
@@ -231,7 +232,6 @@ body{
 }
 .icon_button_wrapper{
     @include mp-0;
-    height: 70px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -250,6 +250,7 @@ body{
             border: none;
             outline: none;
             padding: 8px 12px;
+            margin: 3px;
             font-size: 13px;
             border-radius: 20px;
             color: #C6C6C8;
@@ -269,7 +270,7 @@ body{
             padding-left: 40px;
             width: 180px;
             position: relative;
-            background:  url("../img/search_icon.png") 3% center/25px 80% no-repeat;
+            background: url("../img/icon_search.png") 5% center/20px 70% no-repeat
         }
         
     }
@@ -295,7 +296,7 @@ body{
     .icons_preview{
         @include flex-center;
         height: 100%;
-        width: 25%;
+        width: 200px;
         img{
             width: 100%;
 
@@ -303,7 +304,7 @@ body{
         
     }
     .icons_list{
-        width: 75%;
+        width: calc(100% - 200px);
         .icons_list_go{
             height: 100%;
             overflow: auto;
@@ -311,9 +312,11 @@ body{
                 display: flex;
                 flex-flow: row wrap;
                 margin: 0px 10px;
+                justify-content: center;
+                align-items: center;
                 li{
-                    width: 100px;
-                    height: 50px;
+                    width: 150px;
+                    height: 70px;
                     cursor: pointer;
                     border-radius: 5px;
                     margin: 2px;
@@ -327,6 +330,7 @@ body{
                     }
                     img{
                         width: 100%;
+                        height: 100%;
                     }
                 }
                 .icons_list_title{

@@ -30,12 +30,6 @@ if (h > 12) {
 }
 
 
-
-
-
-
-
-
     if (text_input.value == '' || text_input.value == ' ') {
         msg_showing_box.innerHTML;
     } else {
@@ -56,7 +50,7 @@ if (h > 12) {
 
         <div class="msg_more_window msg_more_window_hide"> 
         
-        
+     
        
         <button class="msg_btn msg_remove_btn"> Remove </button>
         
@@ -166,14 +160,14 @@ text_input_fa.onclick = function () {
 
 
 
-// for Emoticons
+// for icons preview
 
-// Emoticons preview
+// icons preview 
 let icons_list_go_li = document.querySelectorAll('.icons_list_go ul li img');
 let icons_preview = document.querySelectorAll('.icons_preview img');
 let icons_alt_show = document.querySelectorAll('.icons_alt_show');
 icons_list_go_li.forEach(function (i1) {
-    i1.onmouseover = function () {
+    i1.onmouseover = function() {
         let getPreviewSrc = this.getAttribute('src');
         let getAltShow = this.getAttribute('alt');
         icons_preview.forEach(function (ico) {
@@ -233,15 +227,6 @@ if (h > 12) {
 
 
 
-
-
-
-
-
-
-
-
-
         icon_wrapper.classList.remove('show_icon_wrapper')
         let msg_showing_box = document.querySelector('.msg_showing_box');
         msg_showing_box.innerHTML += `<div class="show_msg_now">
@@ -258,6 +243,7 @@ if (h > 12) {
         
         </span>
         <div class="msg_more_window msg_more_window_hide"> 
+     
         
         <button class="msg_btn msg_remove_btn"> Remove </button>
         
@@ -310,17 +296,17 @@ function updateFunction() {
 
     let msg_more_option = document.querySelectorAll('.msg_more_option');
     let text_input = document.querySelector('#text_input');
-    msg_more_option.forEach(function(m,n,o){
+    msg_more_option.forEach(function(m){
        
         if (m.nextElementSibling.classList.contains("window_close")) {
             text_input.onfocus = function(){
                 m.nextElementSibling.classList.add('msg_more_window_hide');
             };
-           
         }
         m.onclick = function(){
             m.nextElementSibling.classList.toggle('msg_more_window_hide');
             m.nextElementSibling.classList.add("window_close");
+            m.classList.add('more_option2');
          }
     })
 
@@ -336,19 +322,28 @@ function updateFunction() {
             this.classList.add('rvMove');
            
         };
-        btn_send_remove.onclick = function(){
+
+        // for remove the alert
+        function send_remove(){
             rvMove.parentElement.parentElement.remove();
             msg_send_alert.style.display = 'none';
             rvMove.classList.remove('rvMove');
         }
-      
-        btn_send_cancel.onclick = function(){
+        btn_send_remove.onclick = send_remove;
+
+
+        // for cancel the alert
+        function send_cancel(){
             msg_send_alert.style.display = 'none';
             let msg_more_window = document.querySelector('.msg_more_window');
             msg_more_window.classList.add('msg_more_window_hide');
+            
 
         }
+        msg_send_alert.addEventListener('click', send_cancel);
+        btn_send_cancel.onclick = send_cancel;
     })    
+    // for copy text
 
 
 
