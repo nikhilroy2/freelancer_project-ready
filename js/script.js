@@ -50,7 +50,9 @@ if (h > 12) {
 
         <div class="msg_more_window msg_more_window_hide"> 
         
-     
+        <button class="msg_btn msg_copy_btn"> Copy </button>
+        <button class="msg_btn msg_forward_btn"> Forward </button>
+
        
         <button class="msg_btn msg_remove_btn"> Remove </button>
         
@@ -244,6 +246,9 @@ if (h > 12) {
         </span>
         <div class="msg_more_window msg_more_window_hide"> 
      
+        <button class="msg_btn msg_copy_btn"> Copy </button>
+        <button class="msg_btn msg_forward_btn"> Forward </button>
+
         
         <button class="msg_btn msg_remove_btn"> Remove </button>
         
@@ -308,6 +313,9 @@ function updateFunction() {
             m.nextElementSibling.classList.add("window_close");
             m.classList.add('more_option2');
          }
+         
+        
+         
     })
 
     // for remove msg_remove_btn update..............
@@ -343,8 +351,11 @@ function updateFunction() {
         msg_send_alert.addEventListener('click', send_cancel);
         btn_send_cancel.onclick = send_cancel;
     })    
-    // for copy text
 
+
+
+    // for copy text
+  
 
 
 }
